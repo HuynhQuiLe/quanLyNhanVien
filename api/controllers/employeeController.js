@@ -6,6 +6,14 @@ const getAllEmployee = asyncHandler(async (req, res) => {
   return res.status(200).json(employees);
 });
 
+const getEmployee = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  if (id) {
+    const employee = await Employee.findOne({ _id: id });
+    return res.status(200).json(employee);
+  }
+});
+
 const addEmployee = asyncHandler(async (req, res) => {
   const {
     tknv,
@@ -48,4 +56,42 @@ const deleteEmployee = asyncHandler(async (req, res) => {
     return res.status(200).json(newEmployees);
   }
 });
-module.exports = { getAllEmployee, addEmployee, deleteEmployee };
+
+const updateEmployee = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const {
+    tknv,
+    name,
+    email,
+    password,
+    datepicker,
+    luongCB,
+    chucvu,
+    gioLam,
+    luong,
+    xepLoai,
+  } = req.body;
+
+  const employee = await Employee.findOne({ _id: id }).exec();
+  employee.tknv = tknv;
+  employee.name = name;
+  employee.email = email;
+  employee.password = password;
+  employee.datepicker = datepicker;
+  employee.luongCB = luongCB;
+  employee.chucvu = chucvu;
+  employee.gioLam = gioLam;
+  employee.luong = luong;
+  employee.xepLoai = xepLoai;
+
+  const updateEmployee = await employee.save();
+  return res.status(201).json(updateEmployee);
+});
+
+module.exports = {
+  getAllEmployee,
+  getEmployee,
+  addEmployee,
+  deleteEmployee,
+  updateEmployee,
+};

@@ -137,6 +137,7 @@
                     id="btnThem"
                     data-toggle="modal"
                     data-target="#myModal"
+                    onclick="btnThemOnlick()"
                   >
                     Thêm nhân viên
                   </button>
@@ -154,6 +155,7 @@
                       class="form-control"
                       placeholder="Loại nhân viên"
                       id="searchName"
+                      oninput="handleSearch(event)"
                     />
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="btnTimNV"
@@ -383,7 +385,12 @@
             >
               Thêm người dùng
             </button>
-            <button id="btnCapNhat" type="button" class="btn btn-success">
+            <button
+              id="btnCapNhat"
+              type="button"
+              class="btn btn-success"
+              onclick="updateNhanVien()"
+            >
               Cập nhật
             </button>
             <button
@@ -391,6 +398,7 @@
               type="button"
               class="btn btn-danger"
               data-dismiss="modal"
+              onclick="handleClose()"
             >
               Đóng
             </button>
