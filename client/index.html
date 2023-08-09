@@ -277,20 +277,27 @@
               </div>
 
               <div class="form-group">
-                <div class="input-group">
+                <div class="input-group position-relative">
                   <div class="input-group-prepend">
                     <span class="input-group-text"
                       ><i class="fa fa-key"></i
                     ></span>
                   </div>
                   <input
-                    type="text"
+                    type="password"
                     name="password"
                     id="password"
                     class="form-control input-sm input-form"
                     placeholder="Mật khẩu"
                     oninput="handleChangePassword(event)"
                   />
+                  <div
+                    class="position-absolute"
+                    style="top: 20%; right: 10px; z-index: 100"
+                  >
+                    <i class="fa fa-eye" onclick="show()"></i>
+                    <i class="fa fa-eye-slash d-none" onclick="hide()"></i>
+                  </div>
                 </div>
                 <span class="sp-thongbao" id="tbMatKhau"></span>
               </div>
@@ -439,6 +446,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="./js//modal.js"></script>
     <script src="./controllers/NhanVienController.js"></script>
     <script src="./models/NhanVien.js"></script>
     <script src="./js/validation.js"></script>

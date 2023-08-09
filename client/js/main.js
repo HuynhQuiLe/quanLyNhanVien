@@ -71,10 +71,10 @@ function renderNhanVien(nhanVienArray) {
           <td>${nhanvien.luong.toLocaleString()}</td>
           <td>${nhanvien.xepLoai}</td>
           <td class="flex">
-              <button class="btn btn-warning" onclick="btnUpdateOnlick('${
+              <button class="btn btn-warning mb-1" onclick="btnUpdateOnlick('${
                 nhanvien._id
               }')"><i class="fa fa-edit"></i></button>
-              <button class="btn btn-danger" onclick="deleteNhanVien('${
+              <button class="btn btn-danger mb-1" onclick="deleteNhanVien('${
                 nhanvien._id
               }')"><i class="fa fa-trash"></i></button>
           </td>
