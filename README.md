@@ -1,6 +1,6 @@
 # quanLyNhanVien <br/>
 # linkDeloy: https://lehuynhqui-qlnv.vercel.app/ <br/>
-## linkDeployBackEnd: https://lehuynhqui-qlnv-back-end.vercel.app/ /<br/>
+## linkDeployBackEnd: https://qlnv.adaptable.app/ /<br/>
 Bài tập này em tự viết BACKEND, nên có thể sẽ có lỗi trong lúc deploy. <br/>
 #TRƯỜNG HỢP BỊ LỖI: sau khi clone code về, anh chị giúp em: <br/>
 - b1: cd vào api <br/>
