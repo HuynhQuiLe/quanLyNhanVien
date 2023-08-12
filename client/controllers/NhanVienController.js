@@ -1,4 +1,6 @@
-const BASE_URL = "http://localhost:3000/employee";
+// const BASE_URL = "http://localhost:3000/employee";
+
+const BASE_URL = "https://qlnv.adaptable.app/employee";
 
 // lay DSNNV
 const getAllEmployees = async () => {
